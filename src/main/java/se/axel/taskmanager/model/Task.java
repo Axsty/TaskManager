@@ -24,11 +24,6 @@ public class Task {
     @Column(nullable = false)
     private TaskStatus status;
 
-    public Task(String taskName, TaskStatus status) {
-        this.taskName = taskName;
-        this.status = status != null ? status : TaskStatus.TODO;
-    }
-
     public Task(String taskName) {
         this.taskName = taskName;
         this.status = TaskStatus.TODO;
