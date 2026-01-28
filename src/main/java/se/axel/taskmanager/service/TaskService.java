@@ -20,7 +20,7 @@ public class TaskService {
 
     @Transactional
     public Task createTask(String title) {
-        Task task = new Task();
+        Task task = new Task(title);
         return repo.save(task);
     }
 
