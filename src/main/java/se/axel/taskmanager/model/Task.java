@@ -31,5 +31,6 @@ public class Task {
 
     public Task(String taskName) {
         this.taskName = taskName;
+        this.status = TaskStatus.TODO;
     }
 }
