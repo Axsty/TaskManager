@@ -3,11 +3,11 @@ package se.axel.taskmanager.service;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import se.axel.taskmanager.enums.TaskStatus;
+import se.axel.taskmanager.exceptions.TaskNotFoundException;
 import se.axel.taskmanager.model.Task;
 import se.axel.taskmanager.repository.TaskRepository;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class TaskService {
@@ -27,7 +27,7 @@ public class TaskService {
     @Transactional(readOnly = true)
     public Task getTaskById(Long id) {
         return repo.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Task not found: " + id));
+                .orElseThrow(() -> new TaskNotFoundException(id));
     }
 
     @Transactional(readOnly = true)
@@ -38,7 +38,7 @@ public class TaskService {
     @Transactional
     public Task updateTask(Long id, TaskStatus newStatus) {
         Task task = repo.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Task not found: " + id));
+                .orElseThrow(() -> new TaskNotFoundException(id));
         task.setStatus(newStatus);
         return repo.save(task);
     }
@@ -46,7 +46,7 @@ public class TaskService {
     @Transactional
     public void deleteTask(Long id) {
         if (!repo.existsById(id)) {
-            throw new NoSuchElementException("Task not found: " + id);
+            throw new TaskNotFoundException(id);
         }
         repo.deleteById(id);
     }
