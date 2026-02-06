@@ -1,0 +1,97 @@
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px 0;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease;
+}
+
+/* Färgkodning för CRUD */
+#btnCreate {
+    background: #28a745;
+}
+
+#btnCreate:hover {
+    background: #218838;
+}
+
+#btnReadById, #btnReadAllTasks {
+    background: #007bff;
+}
+
+#btnReadById:hover, #btnReadAllTasks:hover {
+    background: #0069d9;
+}
+
+#btnUpdate {
+    background: #ffc107;
+    color: black;
+}
+
+#btnUpdate:hover {
+    background: #e0a800;
+}
+
+#btnDelete {
+    background: #dc3545;
+}
+
+#btnDelete:hover {
+    background: #c82333;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #333;
+}
+
+#output {
+    background: white;
+    padding: 20px;
+    width: 500px;
+    min-height: 150px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+}

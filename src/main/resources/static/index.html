@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Task Manager API</h1>
+
+<input type="text" id="taskTitleInput" placeholder="Task title">
+
+<input type="number" id="taskIdInput" placeholder="Task ID">
+
+<select id="taskStatusSelect">
+    <option value="TODO">TODO</option>
+    <option value="IN_PROGRESS">IN_PROGRESS</option>
+    <option value="DONE">DONE</option>
+</select>
+
+
+<div class="buttons">
+    <button id="btnCreate">Create Task</button>
+    <button id="btnReadById">Get Task</button>
+    <button id="btnReadAllTasks">Get All Tasks</button>
+    <button id="btnUpdate">Update Task</button>
+    <button id="btnDelete">Delete Task</button>
+</div>
+
+<h2>Database</h2>
+<pre id="output"></pre>
+
+<script src="script.js"></script>
+</body>
+</html>
