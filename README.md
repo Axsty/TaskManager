@@ -51,22 +51,6 @@ Entity‑klass för uppgifter.
 Enum -
 Statusvärden för uppgifter.
 
-📌 Funktioner
-
-API:et har följande funktioner:
-
-```
-Skapa en ny task
-
-Hämta alla tasks
-
-Hämta en task via ID
-
-Uppdatera en task
-
-Radera en task
-```
-
 📡 API‑endpoints
 
 ```
