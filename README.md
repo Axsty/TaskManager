@@ -25,6 +25,8 @@ LIA‑ansökan och som en övning i det vi lärt oss i skolan.
     
     CSS
 
+    HTML
+
 
 🗄️ Databas
 
